@@ -45,7 +45,7 @@ int enque(Node** head, int d, int p)
             (*head) = temp;
         } else {
             while (start->next != NULL &&
-                start->next->priority < p) {
+                start->next->priority <= p) {
                 start = start->next;
             }
             temp->next = start->next;
